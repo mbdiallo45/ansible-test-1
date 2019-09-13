@@ -8,6 +8,10 @@
         state: installed
       notify:
         - start nginx
+    - name: Modification du template principale
+      template:
+        src: templates/index.html.j2
+        dest: /var/www/html/index.nginx-debian.html
         
   handlers:
     - name: start nginx
