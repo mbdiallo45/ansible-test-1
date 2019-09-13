@@ -1,0 +1,15 @@
+---
+- hosts: exemple-1
+  tasks:
+    - name: Installation de nginx web server
+      package:
+        name: nginx
+        state: installed
+      notify:
+        - start nginx
+        
+  handlers:
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
