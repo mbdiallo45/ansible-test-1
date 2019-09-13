@@ -1,5 +1,6 @@
 ---
 - hosts: exemple-1
+  remote_user: root
   tasks:
     - name: Installation de nginx web server
       package:
