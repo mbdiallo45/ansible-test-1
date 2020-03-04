@@ -23,8 +23,8 @@ pipeline {
         }       
         stage('Ansible Deploy') {     
           steps {      
-            dir('dev/ansible') {
-              sh 'ansible all -m ping -i hosts'  
+            dir('exemple-1') {
+              sh 'ansible all -m ping -i hosts.cfg'  
             }
           }
         }
